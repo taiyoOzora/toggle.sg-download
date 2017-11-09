@@ -7,6 +7,8 @@ This new and updated program:
 - implements a more correct 'auto-download' function that is fully non-interactive post-command
 - supports multi-threaded downloads
 - has some modifications made in preparation for Python 3 (but is not fully supported on that version yet)
+- download shows and subtitles into a folder
+- subtitle will be auto loaded (tested using: VLC)
 
 # Usage
 On Linux and Mac OS X, first make the script executable:
@@ -34,12 +36,13 @@ Tested with:
 - Python v2.7.11 on Windows 7 x64
 - Python v2.7.11 on Windows 10 10586.104 x64
 - Python v2.7.12 on Xubuntu 16.04 x64
+- Python v2.7.10 on OSX 10.13.1
 
 # Configuration Options
 
 The following configuration option is directly editable in the script file:
 ## FILE_PREFERENCES
-Default: Highest to lowest priority: STB-ADD-IPAD-IPH
+Default: Highest to lowest priority: STB→hlstv_hd→web_hd→ADD→IPAD→tablet_hd→IPH→mobile_hd
 
 Specifies the download file format preference, in order.
 
@@ -57,7 +60,7 @@ Ubuntu 15.04 has a sufficiently recent libav-tools in the stock repository.
 
 ## Mac OS X
 Install ffmpeg from [Homebrew](http://brew.sh/).
-
+After installing homebrew open Terminal and type `brew install ffmpeg`
 Note: there are many hardcoded values used, which could cause the script to break if Toggle changes their page structure
 
 # Other
